@@ -1,17 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CardService } from '../services/card.service'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [ CardService ]
 })
 export class AppComponent {
-    private clicks: number = 0
-    private images: any[] = [{},{},{},{},{},{}]
+    private totalClicks: number = 0
+    private images: any[]
+    private clicks: Array<Object>[2]
 
-    constructor(){ }
+    constructor(private cardService: CardService){
+        this.images = cardService.getImages()
+        this.clicks = [
+            {
+                id: null,
+                number: null
+            },
+            {
+                id: null,
+                number: null
+            }
+        ]
+    }
 
-    click(): void{
-        this.clicks++
+    ngOnInit(){ }
+    
+    click(e): void{
+        this.totalClicks++
+        this.cardService.changeActive(e.image.id)
+        this.clicks[this.totalClicks % 2] = { id: e.image.id, number: e.image.number }
+        
+        if( this.totalClicks % 2 == 0 ){
+            if( this.clicks[0].number != this.clicks[1].number ){
+                this.cardService.changeActive(this.clicks[0].id)
+                this.cardService.changeActive(this.clicks[1].id)
+            }
+        }
     }
 }

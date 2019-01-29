@@ -7,3 +7,15 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+.menu {
+    border: 1px solid black;
+    position: fixed;
+    top: 200px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}

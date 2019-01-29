@@ -6,3 +6,12 @@
     margin-bottom: 5px;
     border-radius: 10px;
 }
+.card-active {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(47, 0, 255);
+    /* background-image: linear-gradient(to bottom right, rgb(39, 209, 231), rgb(47, 0, 255) ); */
+    color: white;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}

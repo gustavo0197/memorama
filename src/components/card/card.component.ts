@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core'
+import { Component, Output, Input, EventEmitter } from '@angular/core'
 
 @Component({
     selector: 'card',
@@ -7,8 +7,10 @@ import { Component, Output, EventEmitter } from '@angular/core'
 })
 export class CardComponent {
     @Output() clickCounter: EventEmitter<Object> = new EventEmitter<Object>()
+    @Input() imageData: any
 
     click(){
-        this.clickCounter.emit({})
+        this.clickCounter.emit({image: this.imageData})
+        // this.imageData.active = !this.imageData.active
     }
 }

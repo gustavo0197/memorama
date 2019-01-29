@@ -1,19 +1,10 @@
 <section class="cards">
-  <!-- <card (clickCounter)="click()"></card>
-  <card (clickCounter)="click()"></card>
-  <card></card>
-  <card></card>
-  <card></card>
-  <card></card>
-  <card></card>
-  <card></card>
-  <card></card>
-  <card></card>
-  <card></card>
-  <card></card> -->
   <card 
     *ngFor="let image of images"
-    (clickCounter)="click()">
+    (clickCounter)="click($event)"
+    [imageData]="image" >
   </card>
 </section>
-{{ clicks }}
+<div class="menu">
+  <p>Clicks: {{ totalClicks }}</p>
+</div>
