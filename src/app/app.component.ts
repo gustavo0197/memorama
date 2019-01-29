@@ -40,4 +40,8 @@ export class AppComponent {
             }
         }
     }
+
+    resetGame(){
+        this.cardService.sortImages()
+    }
 }

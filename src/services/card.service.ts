@@ -11,11 +11,28 @@ export class CardService {
         {id: 10, url: '', number: 6, active: false},{id: 11, url: '', number: 6, active: false}
     ]
 
+    constructor(){
+        this.sortImages()
+    }
+
     getImages(): any[]{
         return this.images
     }
 
-    sortImages(){ }
+    sortImages(){
+        for(let number = 0; number < 100; number++){
+            let from: number = Math.floor( Math.random() * 12 ), 
+                to: number = Math.floor( Math.random() * 12 )
+            let image: Object = this.images[from]
+            this.images[from] = this.images[to]
+            this.images[to] = image
+        }
+
+        for(let number = 0; number < 12; number++){
+            this.images[number].id = number
+            this.images[number].active = false
+        }
+    }
 
     changeActive(id: number){
         this.images[id].active = !this.images[id].active

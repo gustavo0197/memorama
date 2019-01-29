@@ -1,2 +1,2 @@
-<section class="card" (click)="click()" *ngIf="!imageData.active"></section>
+<section class="card" (click)="click()" *ngIf="!imageData.active">{{ imageData.number }}</section>
 <section class="card-active" *ngIf="imageData.active"></section>

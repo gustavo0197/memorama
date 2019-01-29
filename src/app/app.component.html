@@ -1,10 +1,11 @@
 <section class="cards">
-  <card 
-    *ngFor="let image of images"
-    (clickCounter)="click($event)"
-    [imageData]="image" >
-  </card>
+    <card 
+        *ngFor="let image of images"
+        (clickCounter)="click($event)"
+        [imageData]="image" >
+    </card>
 </section>
 <div class="menu">
-  <p>Clicks: {{ totalClicks }}</p>
+    <p>Clicks: {{ totalClicks }}</p>
+    <button (click)="resetGame()" class="button">Reset game</button>
 </div>
