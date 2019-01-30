@@ -35,13 +35,16 @@ export class AppComponent {
         
         if( this.totalClicks % 2 == 0 ){
             if( this.clicks[0].number != this.clicks[1].number ){
-                this.cardService.changeActive(this.clicks[0].id)
-                this.cardService.changeActive(this.clicks[1].id)
+                setTimeout( () => {
+                    this.cardService.changeActive(this.clicks[0].id)
+                    this.cardService.changeActive(this.clicks[1].id)
+                }, 750)
             }
         }
     }
 
     resetGame(){
+        this.totalClicks = 0
         this.cardService.sortImages()
     }
 }

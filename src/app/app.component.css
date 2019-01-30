@@ -8,9 +8,8 @@
     justify-content: space-around;
 }
 .menu {
-    border: 1px solid black;
     position: fixed;
-    top: 200px;
+    top: 150px;
     width: 200px;
     height: 300px;
     display: flex;

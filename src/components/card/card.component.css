@@ -14,4 +14,12 @@
     color: white;
     margin-bottom: 5px;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.image {
+    width: 150px;
+    height: 150px;
 }
