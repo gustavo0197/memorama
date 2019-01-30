@@ -5,6 +5,8 @@
     color: white;
     margin-bottom: 5px;
     border-radius: 10px;
+    -webkit-animation: 1s card 1;
+    -webkit-backface-visibility: visible;
 }
 .card-active {
     width: 200px;
@@ -18,8 +20,27 @@
     justify-content: center;
     align-content: center;
     align-items: center;
+    -webkit-animation: 1s card-active 0.5;
+    -webkit-backface-visibility: visible;
 }
+@-webkit-keyframes card-active {
+    50% {
+        opacity: 0.5%;
+        -webkit-transform: perspective(200px)
+                           rotateY(180deg);
+    }
+}
+@-webkit-keyframes card {
+    100% {
+        opacity: 0.5%;
+        -webkit-transform: perspective(300px)
+                           rotateY(-360deg);
+    }
+}
+
 .image {
     width: 150px;
     height: 150px;
+    -webkit-animation: 1s card-active 0.5;
+    -webkit-backface-visibility: visible;
 }
