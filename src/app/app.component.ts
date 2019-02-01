@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CardService } from '../services/card.service'
 
 @Component({
@@ -25,19 +25,17 @@ export class AppComponent {
             }
         ]
     }
-
-    ngOnInit(){ }
     
     click(e): void{
         this.totalClicks++
-        this.cardService.changeActive(e.image.id)
-        this.clicks[this.totalClicks % 2] = { id: e.image.id, number: e.image.number }
+        this.cardService.flipCard(e.index)
+        this.clicks[this.totalClicks % 2] = { id: e.index, number: e.number }
         
         if( this.totalClicks % 2 == 0 ){
             if( this.clicks[0].number != this.clicks[1].number ){
                 setTimeout( () => {
-                    this.cardService.changeActive(this.clicks[0].id)
-                    this.cardService.changeActive(this.clicks[1].id)
+                    this.cardService.flipCard(this.clicks[0].id)
+                    this.cardService.flipCard(this.clicks[1].id)
                 }, 750)
             }
         }

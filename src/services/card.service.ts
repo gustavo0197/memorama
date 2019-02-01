@@ -3,18 +3,18 @@ import { Injectable } from '@angular/core'
 @Injectable()
 export class CardService {
     private images: any[] = [
-        {id: 0, url: './assets/julianSleeping.png', number: 1, active: false},
-        {id: 1, url: './assets/julianSleeping.png', number: 1, active: false},
-        {id: 2, url: './assets/julian 2.png', number: 2, active: false},
-        {id: 3, url: './assets/julian 2.png', number: 2, active: false},
-        {id: 4, url: './assets/tavo.png', number: 3, active: false},
-        {id: 5, url: './assets/tavo.png', number: 3, active: false},
-        {id: 6, url: './assets/nacho.png', number: 4, active: false},
-        {id: 7, url: './assets/nacho.png', number: 4, active: false},
-        {id: 8, url: './assets/chema.png', number: 5, active: false},
-        {id: 9, url: './assets/chema.png', number: 5, active: false},
-        {id: 10, url: './assets/vitor.png', number: 6, active: false},
-        {id: 11, url: './assets/vitor.png', number: 6, active: false}
+        { url: './assets/julianfat.png', number: 1, visible: false },
+        { url: './assets/julianfat.png', number: 1, visible: false },
+        { url: './assets/julian 2.png', number: 2, visible: false },
+        { url: './assets/julian 2.png', number: 2, visible: false },
+        { url: './assets/tavo.png',  number: 3, visible: false },
+        { url: './assets/tavo.png',  number: 3, visible: false },
+        { url: './assets/nacho.png', number: 4, visible: false },
+        { url: './assets/nacho.png', number: 4, visible: false },
+        { url: './assets/chema.png', number: 5, visible: false },
+        { url: './assets/chema.png', number: 5, visible: false },
+        { url: './assets/vitor.png', number: 6, visible: false },
+        { url: './assets/vitor.png', number: 6, visible: false }
     ]
 
     constructor(){
@@ -35,13 +35,12 @@ export class CardService {
         }
 
         for(let number = 0; number < 12; number++){
-            this.images[number].id = number
-            this.images[number].active = false
+            this.images[number].visible = false
         }
     }
 
-    changeActive(id: number){
-        this.images[id].active = !this.images[id].active
+    flipCard(index: number){
+        this.images[index].visible = !this.images[index].visible
     }
 
 }

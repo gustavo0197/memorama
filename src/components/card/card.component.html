@@ -1,4 +1,5 @@
-<section class="card giroY" (click)="click()" *ngIf="!imageData.active"></section>
-<section class="card-active" *ngIf="imageData.active">
+<section class="card" (click)="click()" *ngIf="!imageData.visible"></section>
+
+<section class="card-active" *ngIf="imageData.visible">
     <img [src]="imageData.url" class="image">
 </section>

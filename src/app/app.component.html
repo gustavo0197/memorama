@@ -1,8 +1,8 @@
 <section class="cards">
     <card 
-        *ngFor="let image of images"
+        *ngFor="let image of images ; let index = index"
         (clickCounter)="click($event)"
-        [imageData]="image" >
+        [imageData]="image" [index]="index">
     </card>
 </section>
 <div class="menu">

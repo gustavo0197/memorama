@@ -1,9 +1,10 @@
 .card {
     width: 200px;
     height: 200px;
-    background-image: linear-gradient(to bottom right, rgb(47, 0, 255), rgb(39, 209, 231) );
+    /* background-image: linear-gradient(to bottom right, rgb(47, 0, 255), rgb(39, 209, 231) ); */
+    background-color: rgb(47, 0, 255);
     color: white;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border-radius: 10px;
     -webkit-animation: 1s card 1;
     -webkit-backface-visibility: visible;
@@ -34,7 +35,7 @@
     100% {
         opacity: 0.5%;
         -webkit-transform: perspective(300px)
-                           rotateY(-360deg);
+                           rotateY(-180deg);
     }
 }
 
