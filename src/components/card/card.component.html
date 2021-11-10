@@ -1,5 +1,5 @@
-<section class="card" (click)="click()" *ngIf="!imageData.visible"></section>
+<div class="card" (click)="selectCard()" *ngIf="!image.visible"></div>
 
-<section class="card-active" *ngIf="imageData.visible">
-    <img [src]="imageData.url" class="image">
-</section>
+<div class="card-active" *ngIf="image.visible">
+  <img [src]="image.url" class="image" />
+</div>

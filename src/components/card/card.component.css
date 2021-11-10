@@ -1,47 +1,46 @@
 .card {
-    width: 200px;
-    height: 200px;
-    /* background-image: linear-gradient(to bottom right, rgb(47, 0, 255), rgb(39, 209, 231) ); */
-    background-color: rgb(47, 0, 255);
-    color: white;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    -webkit-animation: 1s card 1;
-    -webkit-backface-visibility: visible;
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  /* background-image: linear-gradient(to bottom right, rgb(47, 0, 255), rgb(39, 209, 231) ); */
+  background-color: rgb(47, 0, 255);
+  color: white;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  -webkit-animation: 1s card 1;
+  -webkit-backface-visibility: visible;
 }
 .card-active {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(47, 0, 255);
-    /* background-image: linear-gradient(to bottom right, rgb(39, 209, 231), rgb(47, 0, 255) ); */
-    color: white;
-    margin-bottom: 5px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    -webkit-animation: 1s card-active 0.5;
-    -webkit-backface-visibility: visible;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(47, 0, 255);
+  /* background-image: linear-gradient(to bottom right, rgb(39, 209, 231), rgb(47, 0, 255) ); */
+  color: white;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  -webkit-animation: 1s card-active 0.5;
+  -webkit-backface-visibility: visible;
 }
 @-webkit-keyframes card-active {
-    50% {
-        opacity: 0.5%;
-        -webkit-transform: perspective(200px)
-                           rotateY(180deg);
-    }
+  50% {
+    opacity: 0.5%;
+    -webkit-transform: perspective(200px) rotateY(180deg);
+  }
 }
 @-webkit-keyframes card {
-    100% {
-        opacity: 0.5%;
-        -webkit-transform: perspective(300px)
-                           rotateY(-180deg);
-    }
+  100% {
+    opacity: 0.5%;
+    -webkit-transform: perspective(300px) rotateY(-180deg);
+  }
 }
 
 .image {
-    width: 150px;
-    height: 150px;
-    -webkit-animation: 1s card-active 0.5;
-    -webkit-backface-visibility: visible;
+  width: 150px;
+  height: 150px;
+  -webkit-animation: 1s card-active 0.5;
+  -webkit-backface-visibility: visible;
 }
